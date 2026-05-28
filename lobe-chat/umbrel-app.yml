@@ -3,7 +3,7 @@ id: lobe-chat
 name: Lobe Hub
 tagline: Your self-hosted AI workspace for chat, agents, and knowledge
 category: ai
-version: "2.1.56"
+version: "2.2.0"
 port: 7455
 description: >-
   💬 Lobe Hub is a self-hosted AI workspace for conversations, agent teams,
@@ -36,15 +36,17 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  This release includes fixes from v2.1.55 and a database schema update in v2.1.56. The migration runs automatically on startup — no manual steps are required.
+  This release introduces the Chief Agent Operator, an agent workflow that can self-review, iterate on its own output, dispatch sub-agent teams, and pause when human input is needed.
 
 
   Key changes:
-    - Fixed an issue where sending the first message in an empty Page Agent panel would clear the newly created topic
-    - Fixed sending from the Home chat input not routing to the correct new topic when the route had no warm cache
-    - Fixed stale topics being carried over when switching between agents or scoped pages
-    - Added two new nullable columns (`trigger`, `metadata`) and an index to the `briefs` table — existing data is unaffected
+    - Added self-iteration, proposal actions, and auto-executed follow-ups for agent workflows
+    - Added auto-formed sub-agent teams with monitor callbacks, breadcrumbed threads, and a thread switcher
+    - Improved task scheduling, Claude Code task tools, and waiting-for-human status handling
+    - Improved cloud Claude Code, GitHub token, and sandbox completion flows
+    - Improved chat mode, the action bar, home recommendations, document tree updates, and MCP inspectors
+    - Fixed bot identity gating issues for Slack, Discord, and device-tool activations
 
 
-  Full release notes are available at https://github.com/lobehub/lobehub/releases
+  Full release notes are available at https://github.com/lobehub/lobehub/releases/tag/v2.2.0
 path: ""

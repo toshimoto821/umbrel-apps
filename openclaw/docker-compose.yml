@@ -6,7 +6,7 @@ services:
       APP_PORT: 18789
 
   gateway:
-    image: ghcr.io/getumbrel/openclaw-umbrel:2026.5.6@sha256:38393b545f7fb6c1857a8274de53ecf318634a16bb0c9b2e99bb1d7014a13fcb
+    image: ghcr.io/getumbrel/openclaw-umbrel:2026.5.26@sha256:6b47dba320cf699ba1b22e9320e7b04e328a8d71d06d8e4ee378a61b8fb2615b
     user: "1000:1000"
     init: true
     restart: on-failure

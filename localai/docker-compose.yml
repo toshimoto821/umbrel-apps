@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
       PROXY_AUTH_WHITELIST: "/v1/*"
   api:
-    image: localai/localai:v4.1.3@sha256:a6af99e17a73a92caa134e70ae84492cc47b67645c1676268a7522ad14f4c09d
+    image: localai/localai:v4.3.1@sha256:28f0aa989a2963ef863706d19e4dca95da16ed3db31e106fb65e66356d8cf89a
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/readyz"]
       interval: 1m
@@ -17,4 +17,7 @@ services:
       - MODELS_PATH=/models
     volumes:
       - ${APP_DATA_DIR}/data/models:/models:cached
+      - ${APP_DATA_DIR}/data/backends:/backends:cached
+      - ${APP_DATA_DIR}/data/data:/data:cached
+      - ${APP_DATA_DIR}/data/configuration:/configuration:cached
       - ${APP_DATA_DIR}/data/images/:/tmp/generated/images/

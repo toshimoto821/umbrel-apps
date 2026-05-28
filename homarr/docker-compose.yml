@@ -7,7 +7,7 @@ services:
       APP_PORT: 7575
 
   web:
-    image: ghcr.io/homarr-labs/homarr:v1.60.0@sha256:9ec1c487ca908471d83ddb7d56c9135f0034bd584295d56cdb4ee9830d747546
+    image: ghcr.io/homarr-labs/homarr:v1.62.0@sha256:fc96436bf80000bed8989d6606fc1ac0929bf4809bb4594168ad4b327e8f2c5f
     restart: on-failure
     environment:
       SECRET_ENCRYPTION_KEY: ${APP_SEED}

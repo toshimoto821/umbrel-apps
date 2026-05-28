@@ -3,7 +3,7 @@ id: twenty
 name: Twenty
 tagline: An adaptable CRM solution for seamless team collaboration and growth
 category: files
-version: "1.20.0"
+version: "2.6.0"
 port: 2020
 description: >-
   Twenty is the leading open-source CRM, built by a community of hundreds of contributors to meet the unique needs of your business. Designed for flexibility, it helps businesses of all sizes efficiently manage customer relationships and streamline workflows.
@@ -39,20 +39,16 @@ gallery:
   - 3.jpg
   - 4.jpg
 releaseNotes: >-
-  This release introduces improvements across navigation, AI, workflows, record layouts, and security:
-    - Navbar drag-and-drop reordering with animated sidebar and improved menu item management
-    - AI chat improvements including resumable stream support, draft message persistence, composer redesign, and new AI model settings
-    - Workflow enhancements including iterator skip-on-failure, multiselect form step, improved metrics, and various bug fixes
-    - Record page layout improvements including tab editing, fields widget migration to backend, hidden fields group, and merge records support
-    - OAuth 2.0 Dynamic Client Registration (RFC 7591) and unified application registration
-    - Rich Text field type now creatable by users
-    - Security improvements including XSS prevention for file serving endpoints, additional SSRF IP validation, and various dependency vulnerability fixes
-    - Performance optimizations with multi-layer caching for hot database queries and Apollo Client v4 upgrade
-    - Dashboard record table widget and improved filter handling for deleted fields
-    - Various bug fixes for navigation, board view, permissions, and UI rendering
+  This release includes workflow, admin, app, and security improvements:
+    - Added relation traversal in filter dropdowns and improved workflow function inputs
+    - Added signing key management with usage tracking in the admin panel
+    - Improved internal email sync controls and app variable handling
+    - Fixed workspace upgrade and migration edge cases for larger workspaces
+    - Fixed app reinstall, phone index, OpenAPI schema, and theme/UI issues
+    - Improved secret handling by encrypting connected account tokens and reducing APP_SECRET exposure
 
 
-  Full release notes can be found at https://github.com/twentyhq/twenty/releases/
+  Full release notes can be found at https://github.com/twentyhq/twenty/releases/tag/v2.6.0
 dependencies: []
 path: ""
 defaultUsername: ""

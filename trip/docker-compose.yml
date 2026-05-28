@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   app:
-    image: ghcr.io/itskovacs/trip:1.43.2@sha256:9e63c48d8c11b681d67e1a4178ca9b1818a2aba53e8541df30fcd8bdb40c3ad5
+    image: ghcr.io/itskovacs/trip:1.45.1@sha256:ab6750f656a5522ae39ea5431e15d1defb7fb441b5ccad4c052bc68d7674f87b
     restart: on-failure
     stop_grace_period: 1m
     volumes:

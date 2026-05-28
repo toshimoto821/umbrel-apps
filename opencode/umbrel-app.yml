@@ -3,7 +3,7 @@ id: opencode
 name: OpenCode
 tagline: The open source AI coding agent
 category: ai
-version: "1.14.33"
+version: "1.15.11"
 port: 4096
 description: >-
   OpenCode is an open source AI coding agent designed to enhance your development
@@ -33,36 +33,13 @@ gallery:
   - 3.jpg
   - 4.jpg
 releaseNotes: >-
-  This release brings new features, fixes, and improvements.
+  This update adds a provider request header timeout, improves experimental background agent updates, and refines the Desktop v2 home screen and session controls.
 
 
-  Core improvements:
-    - Fixed custom agents in plugins not loading
-    - Sessions now keep a relative workspace path
-    - Shell cancellations now finish cleanly instead of leaving commands in a bad state
-    - Added Mistral Medium 3.5 with reasoning support
-    - Made instruction precedence more predictable by applying global instructions first
-    - Fixed forked sessions so compacted history stays intact
-    - Unsupported image formats now fall back to text reads instead of being sent as image attachments
-    - Fixed Bedrock sessions that include reasoning content when switching models
-    - Azure setup now prompts for the resource name when needed and saves it with the API key
-    - Fixed HTTP API workspace adapters losing instance context
+  It also fixes MCP server cleanup, Google tool calling, resumed-session handling for interrupted tools, DigitalOcean inference auth, and several desktop/TUI issues.
 
 
-  TUI improvements:
-    - Added a quick toggle for paste summaries
-    - Invalid custom themes no longer crash the TUI on startup
-    - Pressing Enter in dialogs now triggers the dialog instead of leaking through
-    - File context is clearer, can be turned off, and clears after sending
-
-
-  Desktop improvements:
-    - Per-workspace icon overrides now stay applied for subdirectories in the same repo
-    - Sync state loading is more reliable for MCP, LSP, and workspace refreshes
-    - Restoring saved messages no longer crashes the app when a model is missing
-
-
-  Full release notes can be found at https://github.com/anomalyco/opencode/releases
+  Full release notes can be found at https://github.com/anomalyco/opencode/releases/tag/v1.15.11
 dependencies: []
 submitter: besoeasy
 submission: https://github.com/getumbrel/umbrel-apps/pull/4718
